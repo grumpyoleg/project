@@ -1,0 +1,11 @@
+[Unit]
+Description=Duino Coin Arduino Miner Emulator
+After=network.target
+
+[Service]
+ExecStart=/root/duino-coin/arduino_miner/arduino_miner /root/duino-coin/arduino_miner/miner.conf
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
